@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>OSCFS</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.3.0</Version>
     <Description>F# library for creating OpenSCAD code</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <ProjectUrl>https://github.com/Birnsen/OSCFS</ProjectUrl>

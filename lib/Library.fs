@@ -175,29 +175,21 @@ module Cube =
 
 module Sphere =
     let create() =
-        {Radius = 1.0; FA = 12.0; FS = 2.0; FN = 0.0} |> Sphere |> Object
+        {Radius = 1.0; FA = 12.0; FS = 2.0; FN = 0.0} 
 
-    let resize(radius : float) = function
-        | (Object (Sphere s)) ->
-            {s with Radius = radius} |> Sphere |> Object
-        | x -> x
+    let resize(radius : float) sphere = 
+        {sphere with Radius = radius} 
 
-    let fragmentAngle(degree : float) = function
-        | (Object (Sphere s)) ->
-            {s with FA = degree} |> Sphere |> Object
-        | x -> x
+    let fragmentAngle(degree : float) sphere = 
+        {sphere with Sphere.FA = degree}
 
-    let fragmentSize(size : float) = function
-        | (Object (Sphere s)) ->
-            {s with FS = size} |> Sphere |> Object
-        | x -> x
+    let fragmentSize(size : float) sphere = 
+        {sphere with Sphere.FS = size}
 
-    let resolution(resolution : float) = function
-        | (Object (Sphere s)) ->
-            {s with FN = resolution} |> Sphere |> Object
-        | x -> x
+    let resolution(resolution : float) sphere = 
+        {sphere with Sphere.FN = resolution}
 
-    let toObject = Sphere >> Object |> List.singleton
+    let toObject sphere = sphere |> Sphere |> Object |> List.singleton
 
 module Cylinder =
     let create() =
